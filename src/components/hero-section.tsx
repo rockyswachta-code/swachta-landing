@@ -119,7 +119,7 @@ export default function HeroSection() {
 									as="h1"
 									className="mx-auto mt-8 max-w-4xl text-balance text-5xl font-semibold md:text-7xl lg:mt-16 xl:text-[5.25rem]"
 								>
-									Modern Solutions for Customer Engagement
+									Nowoczesne rozwiązania dla Twojego domu
 								</TextEffect>
 								<TextEffect
 									per="line"
