@@ -1,3 +1,4 @@
+import { type FormEvent, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -5,6 +6,46 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
 export default function ContactSection() {
+	const [submitState, setSubmitState] = useState<
+		"idle" | "sending" | "success" | "error"
+	>("idle");
+
+	const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+		event.preventDefault();
+		setSubmitState("sending");
+
+		const form = event.currentTarget;
+		const formData = new FormData(form);
+		const honey = formData.get("_honey");
+
+		if (typeof honey === "string" && honey.length > 0) {
+			setSubmitState("success");
+			return;
+		}
+
+		try {
+			const response = await fetch(
+				"https://formsubmit.co/ajax/rocky.swachta@gmail.com",
+				{
+					method: "POST",
+					headers: {
+						Accept: "application/json",
+					},
+					body: formData,
+				},
+			);
+
+			if (!response.ok) {
+				throw new Error("Błąd wysyłki formularza");
+			}
+
+			form.reset();
+			setSubmitState("success");
+		} catch {
+			setSubmitState("error");
+		}
+	};
+
 	return (
 		<section id="contact" className="bg-background py-24">
 			<div className="mx-auto max-w-3xl px-6">
@@ -49,11 +90,7 @@ export default function ContactSection() {
 					</div>
 
 					<Card variant="outline" className="md:col-span-3 p-6">
-						<form
-							action="https://formsubmit.co/rocky.swachta@gmail.com"
-							method="POST"
-							className="space-y-5"
-						>
+						<form onSubmit={handleSubmit} className="space-y-5">
 							<input
 								type="hidden"
 								name="_subject"
@@ -90,6 +127,7 @@ export default function ContactSection() {
 										id="email"
 										name="email"
 										placeholder="twoj@email.com"
+										autoComplete="email"
 										required
 									/>
 								</div>
@@ -102,7 +140,7 @@ export default function ContactSection() {
 								<Input
 									type="text"
 									id="subject"
-									name="subject"
+									name="Temat"
 									placeholder="Jak możemy Ci pomóc?"
 								/>
 							</div>
@@ -113,7 +151,7 @@ export default function ContactSection() {
 								</Label>
 								<Textarea
 									id="message"
-									name="message"
+									name="Wiadomość"
 									rows={4}
 									placeholder="Opisz szczegółowo..."
 									required
@@ -121,7 +159,23 @@ export default function ContactSection() {
 								/>
 							</div>
 
-							<Button className="w-full">Wyślij wiadomość</Button>
+							<Button className="w-full" disabled={submitState === "sending"}>
+								{submitState === "sending"
+									? "Wysyłanie..."
+									: "Wyślij wiadomość"}
+							</Button>
+
+							{submitState === "success" && (
+								<p className="text-sm text-emerald-600 dark:text-emerald-400">
+									Dziękujemy! Wiadomość została wysłana.
+								</p>
+							)}
+							{submitState === "error" && (
+								<p className="text-sm text-destructive">
+									Nie udało się wysłać formularza. Spróbuj ponownie albo
+									zadzwoń.
+								</p>
+							)}
 						</form>
 					</Card>
 				</div>
