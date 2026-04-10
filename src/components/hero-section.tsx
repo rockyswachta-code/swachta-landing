@@ -24,6 +24,21 @@ const transitionVariants = {
 	},
 };
 
+const services = [
+	"Malowanie",
+	"Szpachlowanie",
+	"Meblowanie",
+	"Meble na wymiar",
+	"Płytki",
+	"Złota rączka",
+	"Spawanie",
+	"I inne prace wykończeniowe",
+];
+
+const realizationPhoto = "/realizacje/realizacja-1.jpg";
+const realizationFallback =
+	"https://images.unsplash.com/photo-1504307651254-35680f356df?auto=format&fit=crop&w=1600&q=80";
+
 export default function HeroSection() {
 	return (
 		<>
@@ -126,6 +141,22 @@ export default function HeroSection() {
 									jakościowych. Działamy głównie na terenie Małopolski.
 								</TextEffect>
 
+								<div className="mx-auto mt-8 max-w-3xl">
+									<p className="text-muted-foreground text-sm font-medium">
+										Wykonujemy m.in.:
+									</p>
+									<ul className="mt-3 flex flex-wrap justify-center gap-2">
+										{services.map((service) => (
+											<li
+												key={service}
+												className="bg-muted text-foreground rounded-full border px-3 py-1 text-sm"
+											>
+												{service}
+											</li>
+										))}
+									</ul>
+								</div>
+
 								<AnimatedGroup
 									variants={{
 										container: {
@@ -183,11 +214,18 @@ export default function HeroSection() {
 								<div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border p-4 shadow-lg shadow-zinc-950/15 ring-1">
 									<img
 										className="bg-background aspect-[15/8] relative rounded-2xl w-full"
-										src="https://images.unsplash.com/photo-1504307651254-35680f356df?auto=format&fit=crop&w=1600&q=80"
-										alt="Realizacja budowlana"
+										src={realizationPhoto}
+										onError={(event) => {
+											event.currentTarget.onerror = null;
+											event.currentTarget.src = realizationFallback;
+										}}
+										alt="Realizacja poddasza - S-BUD, Małopolska"
 										width="1600"
 										height="900"
 									/>
+									<p className="text-muted-foreground mt-3 px-1 text-sm">
+										Realizacja: adaptacja poddasza, Małopolska
+									</p>
 								</div>
 							</div>
 						</AnimatedGroup>
