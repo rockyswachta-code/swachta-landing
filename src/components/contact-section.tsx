@@ -1,0 +1,131 @@
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+
+export default function ContactSection() {
+	return (
+		<section id="contact" className="bg-background py-24">
+			<div className="mx-auto max-w-3xl px-6">
+				<div>
+					<h2 className="text-balance font-serif text-4xl font-medium sm:text-5xl">
+						Skontaktuj się z nami
+					</h2>
+					<p className="text-muted-foreground mt-4 max-w-md text-balance">
+						Masz pytania? Chętnie Ci pomożemy. Napisz do nas, a odpowiemy tak
+						szybko, jak to możliwe.
+					</p>
+				</div>
+
+				<div className="mt-12 grid gap-8 md:grid-cols-5">
+					<div className="space-y-6 md:col-span-2">
+						<div>
+							<p className="text-sm font-medium">Email</p>
+							<a
+								href="mailto:rocky.swachta@gmail.com"
+								className="text-muted-foreground text-sm hover:text-primary"
+							>
+								rocky.swachta@gmail.com
+							</a>
+						</div>
+
+						<div>
+							<p className="text-sm font-medium">Telefon</p>
+							<a
+								href="tel:+48881665685"
+								className="text-muted-foreground text-sm hover:text-primary"
+							>
+								+48 881 665 685
+							</a>
+						</div>
+
+						<div>
+							<p className="text-sm font-medium">Adres</p>
+							<p className="text-muted-foreground text-sm">
+								Trzebunia 305, 32-438 Polska
+							</p>
+						</div>
+					</div>
+
+					<Card variant="outline" className="md:col-span-3 p-6">
+						<form
+							action="https://formsubmit.co/rocky.swachta@gmail.com"
+							method="POST"
+							className="space-y-5"
+						>
+							<input
+								type="hidden"
+								name="_subject"
+								value="Nowa wiadomość z formularza S-BUD"
+							/>
+							<input type="hidden" name="_captcha" value="false" />
+							<input type="hidden" name="_template" value="table" />
+							<input
+								type="text"
+								name="_honey"
+								className="hidden"
+								tabIndex={-1}
+								autoComplete="off"
+							/>
+							<div className="grid gap-4 md:grid-cols-2">
+								<div className="space-y-2">
+									<Label htmlFor="name" className="text-sm">
+										Imię
+									</Label>
+									<Input
+										type="text"
+										id="name"
+										name="name"
+										placeholder="Twoje imię"
+										required
+									/>
+								</div>
+								<div className="space-y-2">
+									<Label htmlFor="email" className="text-sm">
+										Email
+									</Label>
+									<Input
+										type="email"
+										id="email"
+										name="email"
+										placeholder="twoj@email.com"
+										required
+									/>
+								</div>
+							</div>
+
+							<div className="space-y-2">
+								<Label htmlFor="subject" className="text-sm">
+									Temat
+								</Label>
+								<Input
+									type="text"
+									id="subject"
+									name="subject"
+									placeholder="Jak możemy Ci pomóc?"
+								/>
+							</div>
+
+							<div className="space-y-2">
+								<Label htmlFor="message" className="text-sm">
+									Wiadomość
+								</Label>
+								<Textarea
+									id="message"
+									name="message"
+									rows={4}
+									placeholder="Opisz szczegółowo..."
+									required
+									className="min-h-28"
+								/>
+							</div>
+
+							<Button className="w-full">Wyślij wiadomość</Button>
+						</form>
+					</Card>
+				</div>
+			</div>
+		</section>
+	);
+}

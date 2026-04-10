@@ -9,46 +9,46 @@ export default function FAQs() {
 	const faqItems = [
 		{
 			id: "item-1",
-			question: "Jak długo trwa wysyłka?",
+			question: "Jak długo trwa realizacja budowy domu?",
 			answer:
-				"Standardowa wysyłka trwa 3-5 dni roboczych, w zależności od lokalizacji. Opcje ekspresowej wysyłki są dostępne przy kasie dla dostawy w 1-2 dni robocze.",
+				"Czas realizacji zależy od zakresu prac i technologii, ale najczęściej zamyka się w 6-12 miesiącach. Przed startem otrzymujesz harmonogram z etapami i terminami.",
 		},
 		{
 			id: "item-2",
-			question: "Jakie metody płatności akceptujecie?",
+			question: "Czy pomagacie w formalnościach i dokumentacji?",
 			answer:
-				"Akceptujemy wszystkie główne karty kredytowe (Visa, Mastercard, American Express), PayPal, Apple Pay i Google Pay. Dla klientów biznesowych oferujemy również opcje faktury.",
+				"Tak. Wspieramy klientów przy dokumentacji projektowej, uzgodnieniach oraz organizacji prac, tak aby cały proces był prostszy i przewidywalny.",
 		},
 		{
 			id: "item-3",
-			question: "Czy mogę zmienić lub anulować zamówienie?",
+			question: "Jak wygląda wycena i czy jest darmowa?",
 			answer:
-				"Możesz zmodyfikować lub anulować zamówienie w ciągu 1 godziny od złożenia. Po tym czasie skontaktuj się z naszym zespołem obsługi klienta, który pomoże Ci wprowadzić zmiany.",
+				"Pierwsza konsultacja i wstępna wycena są bezpłatne. Po ustaleniu szczegółów przygotowujemy szczegółowy kosztorys, aby od początku było jasne, co obejmuje realizacja.",
 		},
 		{
 			id: "item-4",
-			question: "Czy wysyłacie międzynarodowo?",
+			question: "Jakie usługi wykonujecie?",
 			answer:
-				"Tak, wysyłamy do ponad 50 krajów na całym świecie. Wysyłka międzynarodowa zwykle trwa 7-14 dni roboczych. Dodatkowe opłaty celne mogą obowiązywać w zależności od przepisów importowych Twojego kraju.",
+				"Realizujemy budowy domów, przebudowy, remonty generalne i wykończenia pod klucz. Podejmujemy się też pojedynczych etapów, np. elewacji, dachów czy instalacji.",
 		},
 		{
 			id: "item-5",
-			question: "Jaka jest polityka zwrotów?",
+			question: "Czy dajecie gwarancję na wykonane prace?",
 			answer:
-				"Oferujemy 30-dniową politykę zwrotów dla większości produktów. Produkty muszą być w oryginalnym stanie z przyczepionymi metkami. Niektóre specjalistyczne produkty mogą mieć różne warunki zwrotu, które będą podane na stronie produktu.",
+				"Tak. Każdy etap prac odbieramy protokołem, a na wykonane roboty udzielamy gwarancji zgodnie z umową i obowiązującymi przepisami.",
 		},
 	];
 
 	return (
-		<section className="py-16 md:py-24">
+		<section id="faq" className="py-16 md:py-24">
 			<div className="mx-auto max-w-5xl px-4 md:px-6">
 				<div className="mx-auto max-w-xl text-center">
 					<h2 className="text-balance text-3xl font-bold md:text-4xl lg:text-5xl">
-						Częste pytania
+						Najczęstsze pytania
 					</h2>
 					<p className="text-muted-foreground mt-4 text-balance">
-						Szybkie i kompleksowe odpowiedzi na najczęściej zadawane pytania
-						dotyczące naszej platformy, usług i funkcji.
+						Krótkie odpowiedzi dotyczące współpracy, wyceny i realizacji usług
+						budowlanych S-BUD.
 					</p>
 				</div>
 
@@ -71,9 +71,19 @@ export default function FAQs() {
 					</Accordion>
 
 					<p className="text-muted-foreground mt-6 px-8">
-						Nie możesz znaleźć tego, czego szukasz? Skontaktuj się z naszym{" "}
-						<a href="#" className="text-primary font-medium hover:underline">
-							zespołem obsługi klienta
+						Nie znalazłeś odpowiedzi? Napisz do nas na{" "}
+						<a
+							href="mailto:rocky.swachta@gmail.com"
+							className="text-primary font-medium hover:underline"
+						>
+							rocky.swachta@gmail.com
+						</a>{" "}
+						lub zadzwoń pod{" "}
+						<a
+							href="tel:+48881665685"
+							className="text-primary font-medium hover:underline"
+						>
+							+48 881 665 685
 						</a>
 					</p>
 				</div>

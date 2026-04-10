@@ -1,15 +1,7 @@
-import { ArrowRight, ChevronRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { AnimatedGroup } from "@/components/motion-primitives/animated-group";
 import { TextEffect } from "@/components/motion-primitives/text-effect";
 import { Button } from "@/components/ui/button";
-import { Beacon } from "@/components/ui/svgs/beacon";
-import { Bolt } from "@/components/ui/svgs/bolt";
-import { Claude } from "@/components/ui/svgs/claude";
-import { FirebaseFull } from "@/components/ui/svgs/firebase";
-import { Hulu } from "@/components/ui/svgs/hulu";
-import { Spotify } from "@/components/ui/svgs/spotify";
-import { SupabaseFull } from "@/components/ui/svgs/supabase";
-import { VercelFull } from "@/components/ui/svgs/vercel";
 import { HeroHeader } from "./header";
 
 const transitionVariants = {
@@ -45,7 +37,7 @@ export default function HeroSection() {
 					<div className="h-320 absolute left-0 top-0 w-60 -rotate-45 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.06)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)] [translate:5%_-50%]" />
 					<div className="h-320 -translate-y-87.5 absolute left-0 top-0 w-60 -rotate-45 bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.04)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)]" />
 				</div>
-				<section>
+				<section id="oferta">
 					<div className="relative pt-24 md:pt-36">
 						<AnimatedGroup
 							variants={{
@@ -92,11 +84,11 @@ export default function HeroSection() {
 							<div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
 								<AnimatedGroup variants={transitionVariants}>
 									<a
-										href="#link"
+										href="#contact"
 										className="hover:bg-background dark:hover:border-t-border bg-muted group mx-auto flex w-fit items-center gap-4 rounded-full border p-1 pl-4 shadow-md shadow-zinc-950/5 transition-colors duration-300 dark:border-t-white/5 dark:shadow-zinc-950"
 									>
 										<span className="text-foreground text-sm">
-											Introducing Support for AI Models
+											Nowoczesne rozwiązania budowlane
 										</span>
 										<span className="dark:border-background block h-4 w-0.5 border-l bg-white dark:bg-zinc-700" />
 
@@ -119,7 +111,7 @@ export default function HeroSection() {
 									as="h1"
 									className="mx-auto mt-8 max-w-4xl text-balance text-5xl font-semibold md:text-7xl lg:mt-16 xl:text-[5.25rem]"
 								>
-									Nowoczesne rozwiązania dla Twojego domu
+									Budujemy solidnie. Wykańczamy z dbałością.
 								</TextEffect>
 								<TextEffect
 									per="line"
@@ -129,8 +121,9 @@ export default function HeroSection() {
 									as="p"
 									className="mx-auto mt-8 max-w-2xl text-balance text-lg"
 								>
-									Highly customizable components for building modern websites
-									and applications that look and feel the way you mean it.
+									S-BUD to ekipa, która prowadzi inwestycje od stanu surowego po
+									gotowe wnętrza. Terminowo, przejrzyście i bez kompromisów
+									jakościowych.
 								</TextEffect>
 
 								<AnimatedGroup
@@ -150,19 +143,21 @@ export default function HeroSection() {
 									<div className="bg-foreground/10 rounded-[calc(var(--radius-xl)+0.125rem)] border p-0.5">
 										<Button
 											size="lg"
+											nativeButton={false}
 											className="rounded-xl px-5 text-base"
-											render={<a href="#link" />}
+											render={<a href="#contact" />}
 										>
-											<span className="text-nowrap">Start Building</span>
+											<span className="text-nowrap">Umow konsultacje</span>
 										</Button>
 									</div>
 									<Button
 										size="lg"
 										variant="ghost"
+										nativeButton={false}
 										className="h-10.5 rounded-xl px-5"
-										render={<a href="#link" />}
+										render={<a href="#faq" />}
 									>
-										<span className="text-nowrap">Request a demo</span>
+										<span className="text-nowrap">Zobacz pytania</span>
 									</Button>
 								</AnimatedGroup>
 							</div>
@@ -181,57 +176,21 @@ export default function HeroSection() {
 								...transitionVariants,
 							}}
 						>
-							<div className="mask-b-from-55% relative -mr-56 mt-8 overflow-hidden px-2 sm:mr-0 sm:mt-12 md:mt-20">
+							<div
+								id="realizacje"
+								className="mask-b-from-55% relative -mr-56 mt-8 overflow-hidden px-2 sm:mr-0 sm:mt-12 md:mt-20"
+							>
 								<div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border p-4 shadow-lg shadow-zinc-950/15 ring-1">
 									<img
 										className="bg-background aspect-[15/8] relative rounded-2xl w-full"
-										src="https://ui.shadcn.com/examples/mail-dark.png"
-										alt="app screen"
-										width="2700"
-										height="1440"
+										src="https://images.unsplash.com/photo-1504307651254-35680f356df?auto=format&fit=crop&w=1600&q=80"
+										alt="Realizacja budowlana"
+										width="1600"
+										height="900"
 									/>
 								</div>
 							</div>
 						</AnimatedGroup>
-					</div>
-				</section>
-				<section className="bg-background pb-16 pt-16 md:pb-32">
-					<div className="group relative m-auto max-w-5xl px-6">
-						<div className="absolute inset-0 z-10 flex scale-95 items-center justify-center opacity-0 duration-500 group-hover:scale-100 group-hover:opacity-100">
-							<a
-								href="/"
-								className="block text-sm duration-150 hover:opacity-75"
-							>
-								<span>Meet Our Customers</span>
-								<ChevronRight className="ml-1 inline-block size-3" />
-							</a>
-						</div>
-						<div className="group-hover:blur-xs mx-auto mt-12 grid max-w-2xl grid-cols-3 gap-x-12 gap-y-8 transition-all duration-500 group-hover:opacity-50 sm:gap-x-16 sm:gap-y-14 md:grid-cols-4 **:fill-foreground">
-							<div className="flex items-center">
-								<Bolt className="mx-auto h-5 w-full" />
-							</div>
-							<div className="flex items-center">
-								<VercelFull className="mx-auto h-4 w-full" />
-							</div>
-							<div className="flex items-center">
-								<SupabaseFull className="mx-auto h-6" />
-							</div>
-							<div className="flex items-center">
-								<Hulu className="mx-auto h-4 w-full" />
-							</div>
-							<div className="flex items-center">
-								<Spotify className="mx-auto h-6 w-full" />
-							</div>
-							<div className="flex items-center">
-								<FirebaseFull className="mx-auto h-6 w-full" />
-							</div>
-							<div className="flex items-center">
-								<Beacon className="mx-auto h-4 w-full" />
-							</div>
-							<div className="flex items-center">
-								<Claude className="mx-auto h-5 w-full" />
-							</div>
-						</div>
 					</div>
 				</section>
 			</main>

@@ -5,10 +5,10 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const menuItems = [
-	{ name: "Features", href: "#link" },
-	{ name: "Solution", href: "#link" },
-	{ name: "Pricing", href: "#link" },
-	{ name: "About", href: "#link" },
+	{ name: "Oferta", href: "#oferta" },
+	{ name: "Realizacje", href: "#realizacje" },
+	{ name: "FAQ", href: "#faq" },
+	{ name: "Kontakt", href: "#contact" },
 ];
 
 export const HeroHeader = () => {
@@ -48,7 +48,7 @@ export const HeroHeader = () => {
 
 							<button
 								onClick={() => setMenuState(!menuState)}
-								aria-label={menuState ? "Close Menu" : "Open Menu"}
+								aria-label={menuState ? "Zamknij menu" : "Otwórz menu"}
 								className="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden"
 								type="button"
 							>
@@ -91,24 +91,27 @@ export const HeroHeader = () => {
 								<Button
 									variant="outline"
 									size="sm"
+									nativeButton={false}
 									className={cn(isScrolled && "lg:hidden")}
-									render={<a href="#" />}
+									render={<a href="tel:+48881665685" />}
 								>
-									<span>Login</span>
+									<span>Zadzwoń</span>
 								</Button>
 								<Button
 									size="sm"
+									nativeButton={false}
 									className={cn(isScrolled && "lg:hidden")}
-									render={<a href="#" />}
+									render={<a href="#faq" />}
 								>
-									<span>Sign Up</span>
+									<span>Pytania</span>
 								</Button>
 								<Button
 									size="sm"
+									nativeButton={false}
 									className={cn(isScrolled ? "lg:inline-flex" : "hidden")}
-									render={<a href="#" />}
+									render={<a href="#contact" />}
 								>
-									<span>Get Started</span>
+									<span>Darmowa wycena</span>
 								</Button>
 							</div>
 						</div>
