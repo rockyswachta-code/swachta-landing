@@ -123,7 +123,7 @@ export default function HeroSection() {
 								>
 									S-BUD to ekipa, która prowadzi inwestycje od stanu surowego po
 									gotowe wnętrza. Terminowo, przejrzyście i bez kompromisów
-									jakościowych.
+									jakościowych. Działamy głównie na terenie Małopolski.
 								</TextEffect>
 
 								<AnimatedGroup

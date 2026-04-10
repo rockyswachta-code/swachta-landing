@@ -37,6 +37,12 @@ export default function FAQs() {
 			answer:
 				"Tak. Każdy etap prac odbieramy protokołem, a na wykonane roboty udzielamy gwarancji zgodnie z umową i obowiązującymi przepisami.",
 		},
+		{
+			id: "item-6",
+			question: "Na jakim terenie działacie?",
+			answer:
+				"Działamy głównie na terenie Małopolski. Po wcześniejszym uzgodnieniu realizujemy także wybrane zlecenia poza regionem.",
+		},
 	];
 
 	return (

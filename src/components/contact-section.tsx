@@ -87,6 +87,13 @@ export default function ContactSection() {
 								Trzebunia 305, 32-438 Polska
 							</p>
 						</div>
+
+						<div>
+							<p className="text-sm font-medium">Obszar działania</p>
+							<p className="text-muted-foreground text-sm">
+								Działamy głównie na terenie Małopolski
+							</p>
+						</div>
 					</div>
 
 					<Card variant="outline" className="md:col-span-3 p-6">
