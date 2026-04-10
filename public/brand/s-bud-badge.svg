@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <circle cx="256" cy="256" r="216" fill="#111827"/>
+  <circle cx="256" cy="256" r="208" stroke="#F59E0B" stroke-width="12"/>
+  <path d="M156 250L256 165L356 250" stroke="#F59E0B" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M194 242V322H318V242" stroke="#F59E0B" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="256" y="395" fill="#FCD34D" font-size="52" font-family="Geist, Arial, sans-serif" font-weight="700" text-anchor="middle" letter-spacing="8">S-BUD</text>
+</svg>
