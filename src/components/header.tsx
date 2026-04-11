@@ -6,8 +6,9 @@ import { cn } from "@/lib/utils";
 
 const menuItems = [
 	{ name: "Oferta", href: "#oferta" },
-	{ name: "Realizacje", href: "#realizacje" },
-	{ name: "FAQ", href: "#faq" },
+	{ name: "Realizacje", href: "#portfolio" },
+	{ name: "Opinie", href: "#opinie" },
+	{ name: "Jak działamy", href: "#process" },
 	{ name: "Kontakt", href: "#contact" },
 ];
 
@@ -101,9 +102,9 @@ export const HeroHeader = () => {
 									size="sm"
 									nativeButton={false}
 									className={cn(isScrolled && "lg:hidden")}
-									render={<a href="#faq" />}
+									render={<a href="#process" />}
 								>
-									<span>Pytania</span>
+									<span>Proces</span>
 								</Button>
 								<Button
 									size="sm"

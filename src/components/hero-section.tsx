@@ -32,7 +32,15 @@ const services = [
 	"Płytki",
 	"Złota rączka",
 	"Spawanie",
-	"I inne prace wykończeniowe",
+	"Elektryka",
+	"Ciesielstwo",
+	"Hydraulika",
+	"Dekarstwo",
+	"Prace ziemne",
+	"Stolarstwo",
+	"Mycie dachów",
+	"Mycie kostki",
+	"Wiele innych",
 ];
 
 const realizationPhoto = "/realizacje/realizacja-1.jpg";
@@ -138,7 +146,11 @@ export default function HeroSection() {
 								>
 									S-BUD to ekipa, która prowadzi inwestycje od stanu surowego po
 									gotowe wnętrza. Terminowo, przejrzyście i bez kompromisów
-									jakościowych. Działamy głównie na terenie Małopolski.
+									jakościowych. Działamy głównie na terenie Małopolski i
+									współpracujemy z wieloma sprawdzonymi specjalistami:
+									hydraulikami, dekarzami, cieślami, elektrykami, operatorami
+									prac ziemnych oraz stolarzami - i nie tylko. Przygotujemy
+									rozwiązanie szyte na miarę twojej potrzeby.
 								</TextEffect>
 
 								<div className="mx-auto mt-8 max-w-3xl">
