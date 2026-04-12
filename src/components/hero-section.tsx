@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import { AnimatedGroup } from "@/components/motion-primitives/animated-group";
 import { TextEffect } from "@/components/motion-primitives/text-effect";
 import { Button } from "@/components/ui/button";
@@ -41,6 +41,36 @@ const services = [
 	"Mycie dachów",
 	"Mycie kostki",
 	"Wiele innych",
+];
+
+const featuredServices = [
+	{
+		title: "Wykończenia wnętrz",
+		description:
+			"Kompleksowe wykończenia od przygotowania podłoża po finalny montaż.",
+	},
+	{
+		title: "Meble i zabudowy",
+		description:
+			"Meble na wymiar i zabudowy dopasowane do układu pomieszczenia.",
+	},
+	{
+		title: "Instalacje i prace techniczne",
+		description:
+			"Współpraca ze specjalistami: elektryka, hydraulika, dekarstwo, spawanie.",
+	},
+	{
+		title: "Prace zewnętrzne",
+		description:
+			"Mycie dachów i kostki, wybrane prace ziemne oraz roboty towarzyszące.",
+	},
+];
+
+const offerStandards = [
+	"Bezpłatna konsultacja i wycena",
+	"Jasny harmonogram realizacji",
+	"Stały kontakt na każdym etapie",
+	"Odbiór prac protokołem",
 ];
 
 const realizationPhoto = "/realizacje/realizacja-1.jpg";
@@ -147,26 +177,58 @@ export default function HeroSection() {
 									S-BUD to ekipa, która prowadzi inwestycje od stanu surowego po
 									gotowe wnętrza. Terminowo, przejrzyście i bez kompromisów
 									jakościowych. Działamy głównie na terenie Małopolski i
-									współpracujemy z wieloma sprawdzonymi specjalistami:
-									hydraulikami, dekarzami, cieślami, elektrykami, operatorami
-									prac ziemnych oraz stolarzami - i nie tylko. Przygotujemy
-									rozwiązanie szyte na miarę twojej potrzeby.
+									współpracujemy z wieloma sprawdzonymi specjalistami.
 								</TextEffect>
 
-								<div className="mx-auto mt-8 max-w-3xl">
-									<p className="text-muted-foreground text-sm font-medium">
-										Wykonujemy m.in.:
-									</p>
-									<ul className="mt-3 flex flex-wrap justify-center gap-2">
-										{services.map((service) => (
-											<li
-												key={service}
-												className="bg-muted text-foreground rounded-full border px-3 py-1 text-sm"
+								<div className="mx-auto mt-10 max-w-5xl">
+									<div className="grid gap-3 md:grid-cols-2">
+										{featuredServices.map((service) => (
+											<article
+												key={service.title}
+												className="bg-card text-left rounded-2xl border p-4"
 											>
-												{service}
-											</li>
+												<h3 className="text-base font-semibold">
+													{service.title}
+												</h3>
+												<p className="text-muted-foreground mt-2 text-sm leading-relaxed">
+													{service.description}
+												</p>
+											</article>
 										))}
-									</ul>
+									</div>
+
+									<div className="bg-card mt-4 rounded-2xl border p-5 text-left">
+										<p className="text-sm font-semibold">
+											W standardzie zapewniamy:
+										</p>
+										<ul className="mt-3 grid gap-2 sm:grid-cols-2">
+											{offerStandards.map((item) => (
+												<li
+													key={item}
+													className="flex items-center gap-2 text-sm"
+												>
+													<Check className="text-primary size-4" />
+													<span>{item}</span>
+												</li>
+											))}
+										</ul>
+									</div>
+
+									<div className="mt-4">
+										<p className="text-muted-foreground text-sm font-medium">
+											Wykonujemy m.in.:
+										</p>
+										<ul className="mt-3 flex flex-wrap justify-center gap-2">
+											{services.map((service) => (
+												<li
+													key={service}
+													className="bg-muted text-foreground rounded-full border px-3 py-1 text-sm"
+												>
+													{service}
+												</li>
+											))}
+										</ul>
+									</div>
 								</div>
 
 								<AnimatedGroup
@@ -190,7 +252,7 @@ export default function HeroSection() {
 											className="rounded-xl px-5 text-base"
 											render={<a href="#contact" />}
 										>
-											<span className="text-nowrap">Umow konsultacje</span>
+											<span className="text-nowrap">Umów konsultację</span>
 										</Button>
 									</div>
 									<Button

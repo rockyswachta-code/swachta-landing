@@ -49,6 +49,10 @@ export const portfolioItems = [
 	{
 		title: "Adaptacja poddasza",
 		location: "Małopolska",
+		scope: "Malowanie, szpachlowanie, zabudowy stolarskie",
+		duration: "3 tygodnie",
+		result:
+			"Gotowa, jasna przestrzeń mieszkalna z pełnym wykończeniem pod klucz.",
 		image: "/realizacje/realizacja-1.jpg",
 		fallback:
 			"https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80",
@@ -56,6 +60,10 @@ export const portfolioItems = [
 	{
 		title: "Wykończenie salonu",
 		location: "Myślenice",
+		scope: "Płytki, gładzie, malowanie, montaż osprzętu",
+		duration: "2 tygodnie",
+		result:
+			"Nowoczesne wnętrze przygotowane do użytkowania bez dodatkowych poprawek.",
 		image: "/realizacje/realizacja-2.jpg",
 		fallback:
 			"https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80",
@@ -63,9 +71,36 @@ export const portfolioItems = [
 	{
 		title: "Kuchnia na wymiar",
 		location: "Wieliczka",
+		scope: "Projekt i montaż mebli na wymiar, prace instalacyjne",
+		duration: "10 dni",
+		result:
+			"Funkcjonalna zabudowa dopasowana do przestrzeni i potrzeb domowników.",
 		image: "/realizacje/realizacja-3.jpg",
 		fallback:
 			"https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1200&q=80",
+	},
+];
+
+export const beforeAfterItems = [
+	{
+		title: "Adaptacja poddasza",
+		location: "Myślenice",
+		beforeImage: "/realizacje/przed-1.jpg",
+		afterImage: "/realizacje/realizacja-1.jpg",
+		beforeFallback:
+			"https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80",
+		afterFallback:
+			"https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
+	},
+	{
+		title: "Remont strefy dziennej",
+		location: "Wieliczka",
+		beforeImage: "/realizacje/przed-2.jpg",
+		afterImage: "/realizacje/po-2.jpg",
+		beforeFallback:
+			"https://images.unsplash.com/photo-1560185007-cde436f6a4d0?auto=format&fit=crop&w=1200&q=80",
+		afterFallback:
+			"https://images.unsplash.com/photo-1616594039964-3f0d29b6de49?auto=format&fit=crop&w=1200&q=80",
 	},
 ];
 

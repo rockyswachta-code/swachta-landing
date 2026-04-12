@@ -9,9 +9,9 @@ export default function FAQs() {
 	const faqItems = [
 		{
 			id: "item-1",
-			question: "Jak długo trwa realizacja budowy domu?",
+			question: "Jak długo trwa realizacja usługi?",
 			answer:
-				"Czas realizacji zależy od zakresu prac i technologii, ale najczęściej zamyka się w 6-12 miesiącach. Przed startem otrzymujesz harmonogram z etapami i terminami.",
+				"Czas realizacji zależy od zakresu prac i technologii oraz typu usługi, jaki mamy wykonać. Każda usługa jest rozpatrywana indywidualnie i uzgadniana z oczekiwaniami klientów.",
 		},
 		{
 			id: "item-2",
@@ -29,19 +29,31 @@ export default function FAQs() {
 			id: "item-4",
 			question: "Jakie usługi wykonujecie?",
 			answer:
-				"Realizujemy budowy domów, przebudowy, remonty generalne i wykończenia pod klucz. Podejmujemy się też pojedynczych etapów, np. elewacji, dachów czy instalacji.",
+				"Realizujemy budowy domów, przebudowy, remonty generalne i wykończenia pod klucz. Podejmujemy się także pojedynczych etapów prac, np. elewacji, dachów czy instalacji. Zakres naszych usług jest bardzo szeroki.",
 		},
 		{
 			id: "item-5",
 			question: "Czy dajecie gwarancję na wykonane prace?",
 			answer:
-				"Tak. Każdy etap prac odbieramy protokołem, a na wykonane roboty udzielamy gwarancji zgodnie z umową i obowiązującymi przepisami.",
+				"Tak. Prace odbieramy protokołem, a gwarancję i rękojmię realizujemy zgodnie z umową i Kodeksem cywilnym.",
 		},
 		{
 			id: "item-6",
 			question: "Na jakim terenie działacie?",
 			answer:
 				"Działamy głównie na terenie Małopolski. Po wcześniejszym uzgodnieniu realizujemy także wybrane zlecenia poza regionem.",
+		},
+		{
+			id: "item-7",
+			question: "Jak wygląda płatność i zaliczka?",
+			answer:
+				"Płatność realizujemy etapami, zgodnie z postępem prac i harmonogramem. W zależności od zakresu może być wymagana zaliczka na start i materiały.",
+		},
+		{
+			id: "item-8",
+			question: "Czy wystawiacie fakturę i jakie są widełki cen?",
+			answer:
+				"Tak, wystawiamy fakturę. Orientacyjne widełki cen podajemy po krótkiej konsultacji i analizie zakresu, aby wycena była realna i dopasowana do Twojej realizacji.",
 		},
 	];
 
@@ -53,8 +65,8 @@ export default function FAQs() {
 						Najczęstsze pytania
 					</h2>
 					<p className="text-muted-foreground mt-4 text-balance">
-						Krótkie odpowiedzi dotyczące współpracy, wyceny i realizacji usług
-						budowlanych S-BUD.
+						Krótkie odpowiedzi na najczęstsze pytania dotyczące współpracy,
+						wyceny i realizacji usług S-BUD.
 					</p>
 				</div>
 

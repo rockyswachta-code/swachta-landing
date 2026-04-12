@@ -91,7 +91,8 @@ export default function ContactSection() {
 						<div>
 							<p className="text-sm font-medium">Obszar działania</p>
 							<p className="text-muted-foreground text-sm">
-								Działamy głównie na terenie Małopolski
+								Działamy głównie na terenie Małopolski, po uzgodnieniu również
+								poza regionem.
 							</p>
 						</div>
 					</div>
@@ -164,6 +165,33 @@ export default function ContactSection() {
 									required
 									className="min-h-28"
 								/>
+							</div>
+
+							<div className="space-y-3 rounded-xl border p-3 text-sm">
+								<label className="flex items-start gap-2">
+									<input
+										type="checkbox"
+										name="rodo"
+										required
+										className="mt-0.5"
+									/>
+									<span>
+										Akceptuję przetwarzanie danych osobowych zgodnie z RODO w
+										celu obsługi zapytania.
+									</span>
+								</label>
+								<label className="flex items-start gap-2">
+									<input
+										type="checkbox"
+										name="zgoda_na_kontakt"
+										required
+										className="mt-0.5"
+									/>
+									<span>
+										Wyrażam zgodę na kontakt telefoniczny lub mailowy w sprawie
+										tego zapytania.
+									</span>
+								</label>
 							</div>
 
 							<Button className="w-full" disabled={submitState === "sending"}>

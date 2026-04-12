@@ -34,6 +34,18 @@ export default function PortfolioSection() {
 								<p className="text-muted-foreground mt-1 text-sm">
 									{item.location}
 								</p>
+								<div className="mt-3 space-y-2 border-t pt-3 text-sm">
+									<p>
+										<span className="font-medium">Zakres:</span> {item.scope}
+									</p>
+									<p>
+										<span className="font-medium">Czas:</span> {item.duration}
+									</p>
+									<p className="text-muted-foreground leading-relaxed">
+										<span className="text-foreground font-medium">Efekt:</span>{" "}
+										{item.result}
+									</p>
+								</div>
 							</div>
 						</article>
 					))}
