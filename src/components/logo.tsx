@@ -2,15 +2,11 @@ import { cn } from "@/lib/utils";
 
 export const Logo = ({ className }: { className?: string }) => {
 	return (
-		<span
-			className={cn(
-				"text-foreground inline-flex items-center gap-2",
-				className,
-			)}
-		>
-			<LogoIcon className="size-9" />
-			<span className="text-base font-semibold tracking-[0.08em]">S-BUD</span>
-		</span>
+		<img
+			src="/logo-sbud.png"
+			alt="Logo S-BUD Development"
+			className={cn("h-8 w-auto rounded-md object-contain md:h-10", className)}
+		/>
 	);
 };
 

@@ -48,11 +48,11 @@ export const testimonials = [
 export const portfolioItems = [
 	{
 		title: "Adaptacja poddasza",
-		location: "Małopolska",
-		scope: "Malowanie, szpachlowanie, zabudowy stolarskie",
-		duration: "3 tygodnie",
+		location: "Belgia",
+		scope: "Malowanie, szpachlowanie, nowa instalacja elektryczna,",
+		duration: "5 Dni",
 		result:
-			"Gotowa, jasna przestrzeń mieszkalna z pełnym wykończeniem pod klucz.",
+			"Gotowa, jasna przestrzeń mieszkalna z pełnym wykończeniem. Pokój dostosowany dla 4 osób.",
 		image: "/realizacje/realizacja-1.jpg",
 		fallback:
 			"https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80",

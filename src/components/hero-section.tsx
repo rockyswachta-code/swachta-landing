@@ -57,7 +57,7 @@ const featuredServices = [
 	{
 		title: "Instalacje i prace techniczne",
 		description:
-			"Współpraca ze specjalistami: elektryka, hydraulika, dekarstwo, spawanie.",
+			"Współpraca ze specjalistami: elektryka, hydraulika, dekarstwo, malarze.",
 	},
 	{
 		title: "Prace zewnętrzne",
@@ -73,9 +73,8 @@ const offerStandards = [
 	"Odbiór prac protokołem",
 ];
 
-const realizationPhoto = "/realizacje/realizacja-1.jpg";
-const realizationFallback =
-	"https://images.unsplash.com/photo-1504307651254-35680f356df?auto=format&fit=crop&w=1600&q=80";
+const realizationPhoto = "/logo-sbud.png";
+const realizationFallback = "/brand/s-bud-horizontal.svg";
 
 export default function HeroSection() {
 	return (
@@ -137,7 +136,7 @@ export default function HeroSection() {
 							<div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
 								<AnimatedGroup variants={transitionVariants}>
 									<a
-										href="#contact"
+										href="#meble-opalane"
 										className="hover:bg-background dark:hover:border-t-border bg-muted group mx-auto flex w-fit items-center gap-4 rounded-full border p-1 pl-4 shadow-md shadow-zinc-950/5 transition-colors duration-300 dark:border-t-white/5 dark:shadow-zinc-950"
 									>
 										<span className="text-foreground text-sm">
@@ -285,21 +284,18 @@ export default function HeroSection() {
 								id="realizacje"
 								className="mask-b-from-55% relative -mr-56 mt-8 overflow-hidden px-2 sm:mr-0 sm:mt-12 md:mt-20"
 							>
-								<div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border p-4 shadow-lg shadow-zinc-950/15 ring-1">
+								<div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-card relative mx-auto max-w-6xl overflow-hidden rounded-2xl border p-4 shadow-lg shadow-zinc-950/15 ring-1">
 									<img
-										className="bg-background aspect-[15/8] relative rounded-2xl w-full"
+										className="bg-zinc-950/95 aspect-[15/8] relative w-full rounded-2xl object-contain p-4"
 										src={realizationPhoto}
 										onError={(event) => {
 											event.currentTarget.onerror = null;
 											event.currentTarget.src = realizationFallback;
 										}}
-										alt="Realizacja poddasza - S-BUD, Małopolska"
+										alt="Logo firmy S-BUD Development"
 										width="1600"
 										height="900"
 									/>
-									<p className="text-muted-foreground mt-3 px-1 text-sm">
-										Realizacja: adaptacja poddasza, Małopolska
-									</p>
 								</div>
 							</div>
 						</AnimatedGroup>

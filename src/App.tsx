@@ -1,5 +1,6 @@
 import FAQs from "@/components/faqs";
 import HeroSection from "@/components/hero-section";
+import BurntWoodFurnitureSection from "@/components/burnt-wood-furniture-section";
 import ContactSection from "@/components/contact-section";
 import ProcessSection from "@/components/process-section";
 import PortfolioSection from "@/components/portfolio-section";
@@ -13,6 +14,7 @@ function App() {
 	return (
 		<>
 			<HeroSection />
+			<BurntWoodFurnitureSection />
 			<ProcessSection />
 			<PortfolioSection />
 			<BeforeAfterSection />
